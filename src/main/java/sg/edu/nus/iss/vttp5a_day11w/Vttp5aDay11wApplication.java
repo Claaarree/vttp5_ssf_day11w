@@ -16,12 +16,10 @@ public class Vttp5aDay11wApplication {
 		ApplicationArguments appArgs = new DefaultApplicationArguments(args);
 		String port = "3000";
 
-		// if (appArgs.containsOption("port")){
-		// 	port = appArgs.getOptionValues("port").get(0);
-		// }else if (!System.getenv("PORT").equals(null)){
-		// 	port = System.getenv("PORT");
-		// }
-		//System.out.println(System.getenv("PORT"));
+		if (appArgs.containsOption("port")){
+			port = appArgs.getOptionValues("port").get(0);
+		}
+		
 
 		app.setDefaultProperties(Collections.singletonMap("server.port", port));
 
